@@ -1,0 +1,76 @@
+/* Color Scheme */
+
+:root {
+  --primary-color: #160f9a;
+  --accent-color: #06b6d4;
+  --white: #ffffff;
+  --light-gray: #f8fafc;
+  --medium-gray: #f1f5f9;
+  --soft-gray: #e2e8f0;
+  --blue-gray: #64748b;
+  --slate-gray: #475569;
+  --dark: #1e293b;
+
+  --background-color: var(--light-gray);
+  --background-alt-color: var(--medium-gray);
+  --background-alt-color-2: var(--soft-gray);
+
+  --text-color: var(--dark);
+  --text-alt-color: var(--slate-gray);
+
+  --heading-font-color: var(--dark);
+
+  --link-color: var(--primary-color);
+  --link-color-hover: var(--accent-color);
+
+  --button-color: var(--white);
+  --button-background-color: var(--primary-color);
+  --button-color-hover: var(--white);
+  --button-background-hover: var(--accent-color);
+
+  --border-color: var(--soft-gray);
+  --border-alt-color: var(--white);
+
+  --th-color: var(--medium-gray);
+  --tr-color: var(--light-gray);
+
+  --syntax-highlighting-background: var(--medium-gray);
+  --icon-color: var(--white);
+}
+
+:root[dark] {
+  --primary-color: #6366f1;
+  --accent-color: #0ea5e9;
+  --white: #ffffff;
+  --light-gray: #f1f5f9;
+  --dark-blue: #0f172a;
+  --deep-blue: #1e293b;
+  --navy-blue: #334155;
+  --steel-blue: #475569;
+  --slate: #64748b;
+
+  --background-color: var(--dark-blue);
+  --background-alt-color: var(--deep-blue);
+  --background-alt-color-2: var(--navy-blue);
+
+  --text-color: var(--light-gray);
+  --text-alt-color: var(--slate);
+
+  --heading-font-color: var(--white);
+
+  --link-color: var(--primary-color);
+  --link-color-hover: var(--accent-color);
+
+  --button-color: var(--white);
+  --button-background-color: var(--primary-color);
+  --button-color-hover: var(--white);
+  --button-background-hover: var(--accent-color);
+
+  --border-color: var(--navy-blue);
+  --border-alt-color: var(--deep-blue);
+
+  --th-color: var(--deep-blue);
+  --tr-color: var(--navy-blue);
+
+  --syntax-highlighting-background: var(--deep-blue);
+}

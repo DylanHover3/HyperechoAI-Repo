@@ -1,0 +1,219 @@
+/* Automation Services */
+.automation-services {
+  padding: 96px 0;
+  background: var(--background-color);
+
+  .section__info {
+    margin-bottom: 64px;
+    text-align: left;
+  }
+
+  .section__title {
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--heading-font-color);
+  }
+
+  .section__description {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-alt-color);
+    margin: 0;
+  }
+
+  .automation-services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .automation-services__card {
+    background: var(--background-alt-color);
+    border-radius: 16px;
+    padding: 40px 32px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border-color: var(--primary-color);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(
+        90deg,
+        var(--primary-color),
+        var(--primary-color)
+      );
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  .automation-services__card-inner {
+    text-align: center;
+  }
+  .automation-services__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--icon-color) !important;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0)
+      );
+      border-radius: 50%;
+    }
+
+    i {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .automation-services__card-title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: var(--heading-font-color);
+  }
+
+  .automation-services__card-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-alt-color);
+    margin: 0;
+  }
+
+  @media (max-width: $desktop) {
+    padding: 80px 0;
+
+    .section__title {
+      font-size: 42px;
+    }
+
+    .automation-services__grid {
+      gap: 28px;
+    }
+
+    .automation-services__card {
+      padding: 36px 28px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 64px 0;
+
+    .section__info {
+      margin-bottom: 48px;
+    }
+
+    .section__title {
+      font-size: 36px;
+    }
+
+    .section__description {
+      font-size: 16px;
+    }
+
+    .automation-services__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .automation-services__card {
+      padding: 32px 24px;
+    }
+
+    .automation-services__icon {
+      width: 70px;
+      height: 70px;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .automation-services__card-title {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .automation-services__card-description {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 48px 0;
+
+    .section__info {
+      margin-bottom: 40px;
+    }
+
+    .section__title {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .section__description {
+      font-size: 15px;
+    }
+
+    .automation-services__grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .automation-services__card {
+      padding: 28px 20px;
+    }
+
+    .automation-services__icon {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .automation-services__card-title {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .automation-services__card-description {
+      font-size: 14px;
+    }
+  }
+}

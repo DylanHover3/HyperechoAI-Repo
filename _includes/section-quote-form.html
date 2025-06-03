@@ -1,0 +1,238 @@
+<!-- begin quote form section -->
+<section class="quote-form" id="quote-form">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="quote-form__inner">
+          <h2 class="quote-form__title">Get Your AI Solution Quote</h2>
+          <p class="quote-form__description">
+            Ready to transform your business with AI? Fill out the form below
+            and I'll get back to you within 24 hours with a personalized quote
+            for your project.
+          </p>
+
+          <form id="quote-form" class="quote-form__form">
+            <div class="quote-form__fields">
+              <div class="quote-form__field">
+                <label for="name" class="quote-form__label">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="entry.1501081238"
+                  class="quote-form__input"
+                  required
+                />
+              </div>
+
+              <div class="quote-form__field">
+                <label for="email" class="quote-form__label"
+                  >Email Address *</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="entry.1611610629"
+                  class="quote-form__input"
+                  required
+                />
+              </div>
+
+              <div class="quote-form__field">
+                <label for="company" class="quote-form__label"
+                  >Company Name</label
+                >
+                <input
+                  type="text"
+                  id="company"
+                  name="entry.1877487854"
+                  class="quote-form__input"
+                />
+              </div>
+
+              <div class="quote-form__field">
+                <label for="phone" class="quote-form__label"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="entry.49643293"
+                  class="quote-form__input"
+                />
+              </div>
+
+              <div class="quote-form__field quote-form__field--full">
+                <label for="project-type" class="quote-form__label"
+                  >Project Type *</label
+                >
+                <select
+                  id="project-type"
+                  name="entry.1733709438"
+                  class="quote-form__select"
+                  required
+                >
+                  <option value="">Select a project type</option>
+                  <option value="Lead Generation Automation">
+                    Lead Generation Automation
+                  </option>
+                  <option value="CRM Automation">CRM Automation</option>
+                  <option value="AI Chatbot Development">
+                    AI Chatbot Development
+                  </option>
+                  <option value="Hiring Automation">Hiring Automation</option>
+                  <option value="Email Automation">Email Automation</option>
+                  <option value="Existing Integration Solution">
+                    Existing Integration Solution
+                  </option>
+                  <option value="Other (please specify in message)">
+                    Other (please specify in message)
+                  </option>
+                </select>
+              </div>
+
+              <div class="quote-form__field quote-form__field--full">
+                <label for="budget" class="quote-form__label"
+                  >Budget Range *</label
+                >
+                <select
+                  id="budget"
+                  name="entry.1978171484"
+                  class="quote-form__select"
+                  required
+                >
+                  <option value="">Select budget range</option>
+                  <option value="Under $1,000">Under $1,000</option>
+                  <option value="$1,000 - $3,000">$1,000 - $3,000</option>
+                  <option value="$3,000 - $5,000">$3,000 - $5,000</option>
+                  <option value="$5,000 - $15,000">$5,000 - $15,000</option>
+                  <option value="Over $15,000">Over $15,000</option>
+                </select>
+              </div>
+
+              <div class="quote-form__field quote-form__field--full">
+                <label for="message" class="quote-form__label"
+                  >Project Details *</label
+                >
+                <textarea
+                  id="message"
+                  name="entry.1574395482"
+                  class="quote-form__textarea"
+                  rows="6"
+                  placeholder="Please describe your project goals, current challenges, and what you hope to achieve with AI automation..."
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="quote-form__actions">
+              <button
+                type="submit"
+                class="button button--primary quote-form__submit"
+              >
+                Send Quote Request
+              </button>
+              <p class="quote-form__note">
+                * Required fields. Your information is secure and will only be
+                used to provide you with a quote.
+              </p>
+            </div>
+          </form>
+          <div
+            id="form-success"
+            class="quote-form__success"
+            style="display: none"
+          >
+            Thank you! Your quote request has been submitted successfully.
+          </div>
+          <style>
+            .quote-form__success {
+              margin-top: 20px;
+              padding: 20px;
+              background-color: #d4edda;
+              color: #155724;
+              border: 2px solid #c3e6cb;
+              border-radius: 8px;
+              text-align: center;
+              font-weight: 600;
+              animation: fadeIn 0.5s ease-in;
+            }
+
+            @keyframes fadeIn {
+              from {
+                opacity: 0;
+                transform: translateY(-10px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+
+            [data-theme="dark"] .quote-form__success {
+              background-color: #1e3a2e;
+              color: #90ee90;
+              border-color: #2d5a3d;
+            }
+          </style>
+          <script>
+            document
+              .getElementById("quote-form")
+              .addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                const form = event.target;
+                const formData = new FormData(form);
+
+                // Google Forms URL
+                const googleFormUrl =
+                  "https://docs.google.com/forms/u/2/d/e/1FAIpQLSdAC-VZVoG19fyDa-sLTGAGEYW0BBJ8qpN12TlHTCC8Ub2DxQ/formResponse";
+
+                // Debug: Log form data
+                console.log("Form data being sent:");
+                for (let [key, value] of formData.entries()) {
+                  console.log(key + ": " + value);
+                }
+
+                // Create a hidden iframe to submit the form
+                const iframe = document.createElement("iframe");
+                iframe.name = "hidden_iframe";
+                iframe.style.display = "none";
+                document.body.appendChild(iframe);
+
+                // Create a temporary form to submit to the iframe
+                const tempForm = document.createElement("form");
+                tempForm.method = "POST";
+                tempForm.action = googleFormUrl;
+                tempForm.target = "hidden_iframe";
+
+                // Add all form data to the temporary form
+                for (let [key, value] of formData.entries()) {
+                  const input = document.createElement("input");
+                  input.type = "hidden";
+                  input.name = key;
+                  input.value = value;
+                  tempForm.appendChild(input);
+                }
+
+                document.body.appendChild(tempForm);
+
+                // Submit the form
+                tempForm.submit();
+
+                // Clean up
+                setTimeout(() => {
+                  document.body.removeChild(tempForm);
+                  document.body.removeChild(iframe);
+                }, 1000); // Show success message
+                document.getElementById("form-success").style.display = "block";
+
+                // Reset the form
+                form.reset();
+              });
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end quote form section -->

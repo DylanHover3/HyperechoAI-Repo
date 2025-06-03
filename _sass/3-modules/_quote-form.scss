@@ -1,0 +1,159 @@
+/* Quote Form */
+.quote-form {
+  padding: 96px 0;
+  background: var(--background-alt-color);
+
+  .quote-form__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .quote-form__title {
+    margin-bottom: 16px;
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--heading-font-color);
+  }
+
+  .quote-form__description {
+    margin: 0 auto 48px;
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-alt-color);
+  }
+
+  .quote-form__form {
+    text-align: left;
+  }
+
+  .quote-form__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .quote-form__field {
+    display: flex;
+    flex-direction: column;
+
+    &--full {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .quote-form__label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--heading-font-color);
+  }
+
+  .quote-form__input,
+  .quote-form__select,
+  .quote-form__textarea {
+    padding: 16px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+    background: var(--background-color);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: var(--brand-color);
+      box-shadow: 0 0 0 3px rgba(var(--brand-color-rgb), 0.1);
+    }
+
+    &::placeholder {
+      color: var(--text-alt-color);
+    }
+  }
+
+  .quote-form__textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .quote-form__actions {
+    text-align: center;
+  }
+
+  .quote-form__submit {
+    margin-bottom: 16px;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    min-width: 200px;
+  }
+
+  .quote-form__note {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-alt-color);
+    line-height: 1.5;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 80px 0;
+
+    .quote-form__title {
+      font-size: 36px;
+    }
+
+    .quote-form__description {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    .quote-form__fields {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .quote-form__field {
+      &--full {
+        grid-column: 1;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 64px 0;
+
+    .quote-form__title {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .quote-form__description {
+      font-size: 15px;
+      margin-bottom: 32px;
+    }
+
+    .quote-form__fields {
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .quote-form__input,
+    .quote-form__select,
+    .quote-form__textarea {
+      padding: 14px 16px;
+      font-size: 15px;
+    }
+
+    .quote-form__submit {
+      padding: 14px 24px;
+      font-size: 16px;
+      min-width: auto;
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+}

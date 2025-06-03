@@ -1,0 +1,50 @@
+{% if site.data.settings.automation_services.enable == true %}
+<!-- begin automation services section -->
+<section class="section automation-services" id="services">
+  <div class="container">
+    <div class="container__inner">
+      <div class="section__info">
+        <div class="section__head">
+          <h2 class="section__title">
+            {{ site.data.settings.automation_services.automation_services_title
+            }}
+          </h2>
+        </div>
+        {% if
+        site.data.settings.automation_services.automation_services_description
+        %}
+        <p class="section__description">
+          {{
+          site.data.settings.automation_services.automation_services_description
+          }}
+        </p>
+        {% endif %}
+      </div>
+
+      {% if site.data.settings.automation_services.service_items %}
+      <div class="automation-services__grid">
+        {% for service in site.data.settings.automation_services.service_items
+        %}
+        <div class="automation-services__card">
+          <div class="automation-services__card-inner">
+            {% if service.icon %}
+            <div class="automation-services__icon">
+              <i class="{{ service.icon }}"></i>
+            </div>
+            {% endif %} {% if service.title %}
+            <h3 class="automation-services__card-title">{{ service.title }}</h3>
+            {% endif %} {% if service.description %}
+            <p class="automation-services__card-description">
+              {{ service.description }}
+            </p>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+<!-- end automation services section -->
+{% endif %}
