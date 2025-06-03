@@ -1,9 +1,11 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.data.settings.google_analytics }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', '{{ site.data.settings.google_analytics }}');
-</script>
+<!-- Note: Google Analytics scripts are dynamically generated and cannot use traditional SRI -->
+<!-- Security is maintained through CSP script-src whitelist for googletagmanager.com -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id={{ site.data.settings.google_analytics }}"
+></script>
+<script
+  src="{{ site.baseurl }}/js/google-analytics.js"
+  data-ga-id="{{ site.data.settings.google_analytics }}"
+></script>

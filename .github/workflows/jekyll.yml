@@ -26,19 +26,19 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-jobs:  # Build job
+jobs: # Build job
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: "3.1"
           bundler-cache: false # Disable cache temporarily to avoid timeout issues
-          
+
       - name: Install dependencies
         run: |
           bundle config set --local deployment 'false'

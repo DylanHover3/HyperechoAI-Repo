@@ -56,7 +56,7 @@ automation_services:
       description: "Streamline your customer relationship management with AI-powered automation that manages leads, tracks interactions, and personalizes follow-ups to enhance customer engagement."
 
     - title: "Personalized AI Chat Bots"
-      icon: "fa-solid fa-robot"
+      icon: "fa-solid fa-comments"
       description: "Deploy intelligent chatbots and virtual assistants that can handle customer inquiries, provide instant support, resolve issues 24/7, and even book appointments for your business."
 
     - title: "Hiring Automation"
@@ -67,9 +67,9 @@ automation_services:
       icon: "fa-solid fa-envelope"
       description: "Intelligent email marketing and communication automation that personalizes content and optimizes send times for maximum engagement."
 
-    - title: "Integration Solutions"
-      icon: "fa-solid fa-plug"
-      description: "Seamlessly connect your existing tools and systems with custom AI integrations that eliminate data silos and improve workflow efficiency."
+    - title: "AI Agents"
+      icon: "fa-solid fa-robot"
+      description: "Implement AI Agents tailored to your business needs, capable of autonomously handling tasks, making decisions, and optimizing workflows to drive efficiency and innovation."
 
 # Hero Logos
 hero_logos:
