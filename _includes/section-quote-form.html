@@ -12,11 +12,8 @@
           </p>
 
           <form
-            id="quote-form"
+            id="quote-form-element"
             class="quote-form__form"
-            action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSdAC-VZVoG19fyDa-sLTGAGEYW0BBJ8qpN12TlHTCC8Ub2DxQ/formResponse"
-            method="POST"
-            target="_blank"
           >
             <div class="quote-form__fields">
               <div class="quote-form__field">
@@ -24,7 +21,7 @@
                 <input
                   type="text"
                   id="name"
-                  name="entry.1501081238"
+                  name="name"
                   class="quote-form__input"
                   required
                 />
@@ -37,7 +34,7 @@
                 <input
                   type="email"
                   id="email"
-                  name="entry.1611610629"
+                  name="email"
                   class="quote-form__input"
                   required
                 />
@@ -50,7 +47,7 @@
                 <input
                   type="text"
                   id="company"
-                  name="entry.1877487854"
+                  name="company"
                   class="quote-form__input"
                 />
               </div>
@@ -62,7 +59,7 @@
                 <input
                   type="tel"
                   id="phone"
-                  name="entry.49643293"
+                  name="phone"
                   class="quote-form__input"
                 />
               </div>
@@ -73,7 +70,7 @@
                 >
                 <select
                   id="project-type"
-                  name="entry.1733709438"
+                  name="project_type"
                   class="quote-form__select"
                   required
                 >
@@ -102,7 +99,7 @@
                 >
                 <select
                   id="budget"
-                  name="entry.1978171484"
+                  name="budget"
                   class="quote-form__select"
                   required
                 >
@@ -121,7 +118,7 @@
                 >
                 <textarea
                   id="message"
-                  name="entry.1574395482"
+                  name="message"
                   class="quote-form__textarea"
                   rows="6"
                   placeholder="Please describe your project goals, current challenges, and what you hope to achieve with AI automation..."
@@ -148,7 +145,7 @@
             class="quote-form__success"
             style="display: none"
           >
-            Thank you! Your quote request has been submitted successfully.
+            Form Submitted ✅ Thanks!
           </div>
           <style>
             .quote-form__success {
@@ -180,62 +177,7 @@
               border-color: #2d5a3d;
             }
           </style>
-          <script>
-            document
-              .getElementById("quote-form")
-              .addEventListener("submit", function (event) {
-                event.preventDefault(); // Prevent default form submission
-
-                const form = event.target;
-                const formData = new FormData(form);
-
-                // Google Forms URL
-                const googleFormUrl =
-                  "https://docs.google.com/forms/u/2/d/e/1FAIpQLSdAC-VZVoG19fyDa-sLTGAGEYW0BBJ8qpN12TlHTCC8Ub2DxQ/formResponse";
-
-                // Debug: Log form data
-                console.log("Form data being sent:");
-                for (let [key, value] of formData.entries()) {
-                  console.log(key + ": " + value);
-                }
-
-                // Create a hidden iframe to submit the form
-                const iframe = document.createElement("iframe");
-                iframe.name = "hidden_iframe";
-                iframe.style.display = "none";
-                document.body.appendChild(iframe);
-
-                // Create a temporary form to submit to the iframe
-                const tempForm = document.createElement("form");
-                tempForm.method = "POST";
-                tempForm.action = googleFormUrl;
-                tempForm.target = "hidden_iframe";
-
-                // Add all form data to the temporary form
-                for (let [key, value] of formData.entries()) {
-                  const input = document.createElement("input");
-                  input.type = "hidden";
-                  input.name = key;
-                  input.value = value;
-                  tempForm.appendChild(input);
-                }
-
-                document.body.appendChild(tempForm);
-
-                // Submit the form
-                tempForm.submit();
-
-                // Clean up
-                setTimeout(() => {
-                  document.body.removeChild(tempForm);
-                  document.body.removeChild(iframe);
-                }, 1000); // Show success message
-                document.getElementById("form-success").style.display = "block";
-
-                // Reset the form
-                form.reset();
-              });
-          </script>
+          <script src="/js/webhook-form-handler.js"></script>
         </div>
       </div>
     </div>
