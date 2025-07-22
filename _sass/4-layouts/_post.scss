@@ -19,7 +19,7 @@
   border-bottom: 1px solid var(--border-color);
 
   .page-title {
-    font-size: 50px;
+    font-size: 80px;
     line-height: 1;
     margin-right: 60px;
     margin-bottom: 0;
@@ -183,7 +183,7 @@
   img,
   .lightense-wrap,
   .gallery {
-    & + em {
+    &+em {
       a {
         text-decoration: none;
 
@@ -195,8 +195,7 @@
     }
   }
 
-  img,
-  .js-reframe {
+  img, .js-reframe {
     border-radius: 16px;
     overflow: hidden;
 
@@ -205,7 +204,7 @@
     }
   }
 
-  img[src$="#wide"] {
+  img[src$='#wide'] {
     display: block;
     width: 100vw;
     max-width: none;
@@ -299,7 +298,7 @@
     flex-wrap: wrap;
     padding: 16px 36px;
     border-radius: 60px;
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.10);
     background-color: var(--background-color);
   }
 
@@ -322,7 +321,7 @@
     transition: $global-transition;
 
     &:hover {
-      opacity: 0.8;
+      opacity: .8;
     }
   }
 
@@ -361,7 +360,7 @@
     border-radius: 22px;
     overflow: hidden;
     background-color: var(--background-alt-color);
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
 
     @supports not (aspect-ratio: 4/3) {
       padding-top: 31%;
@@ -386,7 +385,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.3s ease, opacity 0.3s ease;
+      transition: transform .3s ease, opacity .3s ease;
     }
 
     .video-icon {
@@ -401,7 +400,7 @@
   }
 
   .next__box {
-    margin-right: 20px;
+    margin-right: 20px
   }
 
   .post__nav {
@@ -467,6 +466,7 @@
       order: 1;
       margin: 0;
     }
+
   }
 
   @media (max-width: $mobile) {

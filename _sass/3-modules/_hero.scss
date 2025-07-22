@@ -1,6 +1,6 @@
 /* Hero */
 .hero {
-  margin: 120px 0 96px;
+  margin: 64px 0 96px;
 
   .hero__inner {
     max-width: 1078px;
@@ -10,7 +10,7 @@
 
   .hero__title {
     margin-bottom: 24px;
-    font-size: 68px;
+    font-size: 80px;
     line-height: 1;
     color: var(--heading-font-color);
   }
@@ -21,15 +21,6 @@
     font-size: 18px;
     line-height: 1.5;
     color: var(--text-alt-color);
-  }
-
-  .hero__buttons {
-    margin-top: 32px;
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
   }
 
   .hero__avatar {
@@ -59,20 +50,8 @@
     margin-top: 32px;
     will-change: transform;
     overflow: hidden;
-    -webkit-mask: linear-gradient(
-      90deg,
-      transparent,
-      white 20%,
-      white 80%,
-      transparent
-    );
-    mask: linear-gradient(
-      90deg,
-      transparent,
-      white 20%,
-      white 80%,
-      transparent
-    );
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
     background: var(--background-color);
   }
 
@@ -95,12 +74,12 @@
 
   @media (max-width: $desktop) {
     .hero__title {
-      font-size: 57px;
+      font-size: 67px;
     }
   }
 
   @media (max-width: $tablet) {
-    margin: 80px 0 80px;
+    margin: 48px 0 80px;
 
     .hero__author {
       font-size: 21px;
@@ -108,7 +87,7 @@
     }
 
     .hero__title {
-      font-size: 36px;
+      font-size: 42px;
     }
 
     .hero__description {
@@ -121,7 +100,7 @@
   }
 
   @media (max-width: $mobile) {
-    margin: 60px 0 80px;
+    margin: 32px 0 80px;
 
     .hero__avatar {
       margin: 0 auto 8px;
@@ -134,22 +113,11 @@
 
     .hero__title {
       margin-bottom: 16px;
-      font-size: 27px;
+      font-size: 32px;
     }
 
     .hero__description {
       font-size: 16px;
-    }
-
-    .hero__buttons {
-      margin-top: 24px;
-      flex-direction: column;
-      gap: 12px;
-
-      .button {
-        width: 100%;
-        max-width: 240px;
-      }
     }
   }
 }
