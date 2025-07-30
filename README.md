@@ -113,6 +113,19 @@ Most content is managed through `_data/settings.yml` for easy updates:
 4. Run `bundle exec jekyll serve` for development server
 5. Visit `http://localhost:4000` to view the site
 
+## Security
+
+This website implements comprehensive security measures including:
+
+- Content Security Policy (CSP) headers
+- Input validation and sanitization
+- Secure webhook integration
+- Protection against XSS and injection attacks
+
+For detailed security information, see [SECURITY.md](SECURITY.md).
+
+**Security Note**: The webhook URL for form submissions is stored in `_data/settings.yml`. For production deployments, consider using environment variables for sensitive configuration.
+
 ## Deployment
 
 The site is configured for GitHub Pages automatic deployment:
