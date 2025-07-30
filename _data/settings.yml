@@ -240,5 +240,12 @@ contact:
 disqus_identifier: anvod-studio-test # Add your shortname for Disqus Comment. For example anvod-studio-test
 
 #-------------------------------
+# Form Integration Settings
+form_integration:
+  webhook_url: "https://hook.us2.make.com/ee83lwngq75kugzd8yl3b1qzpt8ef5hr"
+  # For production, consider using environment variables or a more secure method
+  # to store sensitive URLs
+
+#-------------------------------
 # Google Analytics
 google_analytics: # Add your GA Tracking Id

@@ -14,6 +14,7 @@
           <form
             id="quote-form-element"
             class="quote-form__form"
+            data-webhook-url="{{ site.data.settings.form_integration.webhook_url }}"
           >
             <div class="quote-form__fields">
               <div class="quote-form__field">
@@ -160,6 +161,18 @@
               animation: fadeIn 0.5s ease-in;
             }
 
+            .quote-form__error {
+              margin-top: 20px;
+              padding: 20px;
+              background-color: #f8d7da;
+              color: #721c24;
+              border: 2px solid #f5c6cb;
+              border-radius: 8px;
+              text-align: center;
+              font-weight: 600;
+              animation: fadeIn 0.5s ease-in;
+            }
+
             @keyframes fadeIn {
               from {
                 opacity: 0;
@@ -175,6 +188,12 @@
               background-color: #1e3a2e;
               color: #90ee90;
               border-color: #2d5a3d;
+            }
+
+            [data-theme="dark"] .quote-form__error {
+              background-color: #3a1e1e;
+              color: #ff9999;
+              border-color: #5a2d2d;
             }
           </style>
           <script src="/js/webhook-form-handler.js"></script>
