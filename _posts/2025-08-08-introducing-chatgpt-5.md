@@ -2,7 +2,7 @@
 title: Introducing ChatGPT 5: A New Era in AI Performance
 description: ChatGPT 5 represents a major leap forward in generative AI, offering improved reasoning, reduced hallucinations, enhanced steerability, and expanded use cases across industries from software to healthcare.
 date: 2025-08-08
-image: "/images/ChatGPT-5-Logo.png"
+image: "/images/chatgpt-5.png"
 tags: [ChatGPT, LLMs, New Models]
 ---
 
